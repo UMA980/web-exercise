@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+}
+// 编写移动端网页 要写html的参考数据
+// 可以声明一个 变量 方便修改
+@total-width:750;
+//公共的宽度 公共居中
+.w{
+    width: (693/40rem);
+    margin: 0 auto;
+}
+
+html{
+    // 设置rem的比值
+    font-size: (100vw/@total-width * 40);
+    background-color: #eff0f4;
+}
+a{
+    text-decoration: none;
+}
+// 设置头部header
+.top-bar:extend(.w){
+    // 开启弹性容器
+    display: flex;
+    //设置高度
+    height: (175/40rem);
+    //设置对齐方式
+    justify-content: space-between;
+    //设置辅轴的对齐方式
+    align-items: center;
+
+    a{
+        color: #24253d;
+        font-size: (50/40rem);
+            i{
+                color: #999;
+                font-size: (40/40rem);
+            }
+    }
+}
+
+// 设置 banner
+.banner:extend(.w){
+    img{
+        width: 100%;
+        border-radius: (20/40rem);
+    }
+}
+
+//设置中间菜单
+.menu:extend(.w){
+    //确定元素的高度
+    height: (329/40rem);
+    //设置弹性元素
+    display: flex;
+    //设置换行
+    flex-flow: row wrap;
+    //设置对齐方式
+    justify-content: space-between;
+    //设置辅助方向的对齐方式
+    align-content: space-evenly;
+    //设置框的大小
+    a{
+        width: (327/40rem);
+        height: (104/40rem);
+        
+        line-height:  (104/40rem);
+        font-size:(30/40rem) ;
+        color: #fff;
+        border-radius:(10/40rem);
+        i{
+            margin: 0 (20/40rem) 0 (38/40rem);
+        }
+    }
+
+    .courses{
+        background-color: #f97053;
+    }
+    .star{
+        background-color: #cb4bd6;
+    }
+    .sub{
+        background-color: #faaad6;
+    }
+    .download{
+        background-color: chocolate;
+    }
+}
